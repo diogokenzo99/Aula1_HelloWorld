@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aula1_HelloWord</string>
+    <string name="welcome">Willkommen bei AndroidAppDevelopment</string>
+    <string name="deitel_logo">Deitels logo</string>
+</resources>

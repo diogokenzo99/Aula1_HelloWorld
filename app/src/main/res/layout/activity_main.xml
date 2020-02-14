@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Constraint Layout e o gerenciador de layout que cuida da orientacao de como os elementos da tela serao disponibilizados (tabela, horizontal, verical...) -->
+<!-- 'xmlns:' é a declaracao para chamar o 'android:' ou entao 'xmlns:x' tera o nome 'x:' -->
+<!-- Na definicao de id do gerenciador de layout, e importante colocar, no final do id, seu tipo 'LinearLayout'-->
+<LinearLayout
+    android:id="@+id/helloWordLinear"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!-- wrap_content faz o elemento ocupar apenas o espaco necessario (seu proprio tamanho) para ser exibido (tem como parametro a orientacao height ou width) -->
+    <!-- match_parent ocupa todo o espaco que seu pai ocupa dependendo da orientacao (width/height) -->
+    <!-- no atributo 'text:' e realizado uma busca do tipo @string por exemplo de chave (ex: welcome) cujo valor e definido na pasta (\values\strings.xml) -->
+    <!-- o atributo weight realiza a distribuicao dos elementos DAO conforme seu peso e depende da orientation do linearlayout (se aplica apenas ao height ou ao width) -->
+    <TextView
+        android:id="@+id/helloWordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/welcome"
+        android:textColor="@color/welcome_text_color"
+        android:textSize="@dimen/welcome_textsize"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/bug"
+        android:contentDescription="@string/deitel_logo"/>
+
+
+</LinearLayout>
